@@ -1,7 +1,7 @@
 public class Tile {
     private final String name;
     private final int cost;
-    private final int group; // how to replace with an enumeration?
+    private final String group; // how to replace with an enumeration?
 
     /*
         Design philosophy #1: get it to work first, then refactor
@@ -11,9 +11,9 @@ public class Tile {
     public Tile() {
         this.name = "";
         this.cost = -1;
-        this.group = -1;
+        this.group = "unknown";
     }
-    public Tile(String name, int cost, int group) {
+    public Tile(String name, int cost, String group) {
         this.name = name;
         this.cost = cost;
         this.group = group;
@@ -25,7 +25,7 @@ public class Tile {
     public int getCost() {
         return cost;
     }
-    public int getGroup() {
+    public String getGroup() {
         return group;
     }
     public String tileInfo() {
